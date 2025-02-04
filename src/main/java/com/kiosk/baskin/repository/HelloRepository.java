@@ -18,7 +18,7 @@ public class HelloRepository {
     private final SqlSessionTemplate sqlSessionTemplate;
 
     public List<Dummy> hello() {
-        List<Dummy> list = sqlSessionTemplate.selectList("DummyMapper.getDummyAll2");
+        List<Dummy> list = sqlSessionTemplate.selectList("DummyMapper.getDummyAll");
         return list;
     }
 }
