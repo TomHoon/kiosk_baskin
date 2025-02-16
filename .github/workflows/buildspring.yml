@@ -10,6 +10,16 @@ jobs:
     runs-on: ubuntu-24.04  # GitHub Actions runner with Ubuntu 24.04
 
     steps:
+    - name: After Finish Pull Request Merged 
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USERNAME}}
+        password: ${{ secrets.REMOTE_PASSWORD }}
+        script_stop: true
+        script: |
+          cd ~/app/step1
+
     # Step 1: Checkout the repository
     - name: Checkout code
       uses: actions/checkout@v3
