@@ -1,0 +1,26 @@
+name: Build Spring Boot Project
+
+on:
+  push:
+    branches:
+      - main  # Trigger this workflow when pushing to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04  # GitHub Actions runner with Ubuntu 24.04
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Check if Java is already installed (optional check)
+    - name: Check Java version
+      run: java -version  # This step checks if Java is installed on the system
+
+    # Step 3: Clean the Spring Boot project
+    - name: clean with Gradle
+      run: cd ~/app/step1
+
+    - name: start script
+      run: sh ./deploy.sh
