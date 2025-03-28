@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:3306/baskin
-    username: root
-    password: 1234
+    url: jdbc:mariadb://test-tomhoondb.cevcaiwqyy7k.us-east-1.rds.amazonaws.com:3306/kiosk
+    username: admin
+    password: qweasd1414!
     driver-class-name: org.mariadb.jdbc.Driver
 
 mybatis:
