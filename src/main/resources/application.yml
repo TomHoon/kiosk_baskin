@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mariadb://sangbong-mariadb.cevcaiwqyy7k.us-east-1.rds.amazonaws.com:3306/kiosk
-    username: admin
-    password: qweasd1414!
+    url: jdbc:mariadb://${DBHOST}:${DBPORT}/kiosk
+    username: ${DBUSER}
+    password: ${DBPASS}
     driver-class-name: org.mariadb.jdbc.Driver
 
 mybatis:
