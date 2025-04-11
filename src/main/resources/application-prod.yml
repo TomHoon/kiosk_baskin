@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://${DBHOST}:${DBPORT}/kiosk
+    username: ${DBUSER}
+    password: ${DBPASS}
+    driver-class-name: org.mariadb.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
